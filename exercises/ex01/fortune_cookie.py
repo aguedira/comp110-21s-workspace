@@ -15,10 +15,10 @@ print(x)
 
 # Begin your solution here...
 
-if x < 10: 
+if x < 7: 
     print("Your fortune cookie says...")
 else: 
-    if x == 10:
+    if x <= 10:
         print("You'll meet the love of your life on a Tuesday evening.")
     else: 
         print("Now, go spread positive vibes.")
