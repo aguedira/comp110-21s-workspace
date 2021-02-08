@@ -18,9 +18,19 @@ from datetime import timedelta
 
 
 # Begin your solution here...
-population: float = float(input("Enter an float: "))
-doses_administered: float = float(input("Enter an float: "))
-doses_per_day: int = int(input("Enter an int: "))
-target_percent_vaccinated: int = 80
+population: int = int(input("population: "))
+doses_administered: int = int(input("doses administered: "))
+doses_per_day: int = int(input("doses per day: "))
+target_percent_vaccinated: int = int(input("target percent vaccinated: "))
+targetpercentstring = str(target_percent_vaccinated)
+percent_vaccinated: float = (target_percent_vaccinated / 100)
+new_population: int = round(population * percent_vaccinated)
+target_population: int = new_population - (doses_administered / 2)
+remaining_days: int = target_population / (doses_per_day / 2)
+remainingdaysstring = str(round(remaining_days))
+today: datetime = datetime.today()
+fortnight: timedelta = timedelta(remaining_days)
+future: datetime = today + fortnight 
+future_final: datetime = future.strftime("%B %d, %Y")
 
- 
+print("We will reach " +  targetpercentstring + "% in " + remainingdaysstring +" days, which falls on " + future_final)

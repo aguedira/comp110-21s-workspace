@@ -5,16 +5,16 @@ __author__ = "730212606"
 
 # Begin your solution here...
 
-y: int = int(input("Enter an int: "))
+pick_a_number: int = int(input("pick a number: "))
 
 
-if y % 2 == 0 and y % 7 == 0: 
+if pick_a_number % 2 == 0 and y % 7 == 0: 
     print("TAR HEELS.")
 else: 
-    if y % 2 == 0:
+    if pick_a_number % 2 == 0:
         print("TAR.")
     else: 
-        if y % 7 == 0: 
+        if pick_a_number % 7 == 0: 
             print("HEELS.")
         else: 
             print("CAROLINA.")
