@@ -18,19 +18,19 @@ from datetime import timedelta
 
 
 # Begin your solution here...
-population: int = int(input("population: "))
-doses_administered: int = int(input("doses administered: "))
-doses_per_day: int = int(input("doses per day: "))
-target_percent_vaccinated: int = int(input("target percent vaccinated: "))
-targetpercentstring = str(target_percent_vaccinated)
-percent_vaccinated: float = (target_percent_vaccinated / 100)
-new_population: int = round(population * percent_vaccinated)
-target_population: int = new_population - (doses_administered / 2)
-remaining_days: int = target_population / (doses_per_day / 2)
-remainingdaysstring = str(round(remaining_days))
+Population: int = int(input("Population: "))
+Doses_administered: int = int(input("Doses administered: "))
+Doses_per_day: int = int(input("Doses per day: "))
+Target_percent_vaccinated: int = int(input("Target percent vaccinated: "))
+target_string = str(Target_percent_vaccinated)
+percent_vaccinated: float = (Target_percent_vaccinated / 100)
+new_population: int = round(Population * percent_vaccinated)
+target_population: int = round(new_population - (Doses_administered / 2))
+remaining_days: int = round(target_population / (Doses_per_day / 2))
+remaining_string = str(round(remaining_days))
 today: datetime = datetime.today()
 fortnight: timedelta = timedelta(remaining_days)
 future: datetime = today + fortnight 
-future_final: datetime = future.strftime("%B %d, %Y")
+future_final: str = future.strftime("%B %d, %Y")
 
-print("We will reach " +  targetpercentstring + "% in " + remainingdaysstring +" days, which falls on " + future_final)
+print("We will reach " + target_string + "% vaccination in " + remaining_string + " days, on " + future_final)

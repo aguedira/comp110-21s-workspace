@@ -8,14 +8,13 @@ __author__ = "730212606"
 pick_a_number: int = int(input("pick a number: "))
 
 
-if pick_a_number % 2 == 0 and y % 7 == 0: 
-    print("TAR HEELS.")
+if pick_a_number % 2 == 0 and pick_a_number % 7 == 0: 
+    print('TAR HEELS.')
 else: 
     if pick_a_number % 2 == 0:
-        print("TAR.")
+        print('TAR.')
     else: 
         if pick_a_number % 7 == 0: 
-            print("HEELS.")
+            print('HEELS.')
         else: 
-            print("CAROLINA.")
-
+            print('CAROLINA.')

@@ -11,14 +11,18 @@ __author__ = "730212606"
 # It will evaluate to an int value >= 1 and <= 100. 
 from random import randint
 your_fortune: int = randint(1, 15)
-print(your_fortune)
+
 
 # Begin your solution here...
-
-if your_fortune < 6: 
-    print("Your fortune cookie says...")
+print("Your fortune cookie says...")
+if your_fortune < 7: 
+    if your_fortune < 3:
+        print("You're going to struggle before rising back up.")
+    else: 
+        print("You're fated to meet the one that got away.")
 else: 
     if your_fortune <= 10:
         print("You'll meet the love of your life on a Tuesday evening.")
     else: 
-        print("Now, go spread positive vibes.")
+        print("You'll see someone you've forgotten about.")
+print("Now, go spread positive vibes!")
